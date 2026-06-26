@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Idea Stress Tester</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💡 Idea Stress Tester</h1>
+    <p class="subtitle">Paste your business idea — 8 expert personas will tear it apart and score it.</p>
+
+    <textarea id="idea-input" placeholder="E.g. An app that connects local farmers directly with restaurants, cutting out middlemen..."></textarea>
+    <button class="btn" id="analyze-btn" onclick="analyzeIdea()">🔬 Stress test this idea</button>
+
+    <div class="results hidden" id="results">
+      <div class="ai-summary hidden" id="ai-summary"></div>
+      <div class="grid" id="personas-grid"></div>
+      <div class="survival hidden" id="survival-card">
+        <div class="survival-label">Overall Survival Score</div>
+        <div class="survival-score" id="survival-score">—</div>
+        <div class="survival-verdict" id="survival-verdict"></div>
+      </div>
+
+      <div class="chat-section hidden" id="chat-section">
+        <p class="chat-title">💬 Have a follow-up question about your idea?</p>
+        <div class="chat-log" id="chat-log"></div>
+        <div class="chat-input-row">
+          <input type="text" id="chat-input" placeholder="E.g. How do I reduce the legal risk?" />
+          <button class="btn" id="chat-send-btn" onclick="sendChatMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
